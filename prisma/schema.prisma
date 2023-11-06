@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  username String
+  password String
+  lists List[]
+  recipes Recipe[]
+  hints Hint[]
+}
+
+model Hint{
+  id Int @id @default(autoincrement())
+  content String
+  owner User @relation(fields: [ownerId], references: [id])
+  ownerId Int
+}
+
+model List{
+  id Int @id @default(autoincrement())
+  title String
+  products Product[]
+  members User[]
+}
+
+
+model Product{
+  id Int @id @default(autoincrement())
+  content String
+  createdAt Int
+  list List @relation(fields: [listId], references: [id])
+  listId Int
+}
+
+model Recipe{
+  id Int @id @default(autoincrement())
+  title String
+  ingredients Ingredient[]
+  owner User @relation(fields: [ownerId], references: [id])
+  ownerId Int
+}
+
+model Ingredient{
+  id Int @id @default(autoincrement())
+  content String
+  recipe Recipe @relation(fields: [recipeId], references: [id])
+  recipeId Int
+}
