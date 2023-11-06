@@ -42,7 +42,7 @@ const create = async (req, res) => {
         createdAt: 0,
         list: {
           connect: {
-            id: listId,
+            id: Number(listId),
           },
         },
       },

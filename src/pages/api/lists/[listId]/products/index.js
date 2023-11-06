@@ -35,7 +35,7 @@ const create = async (req, res) => {
       createdAt: dateTime,
       list: {
         connect: {
-          id: listId,
+          id: Number(listId),
         },
       },
     },
