@@ -61,7 +61,7 @@ export const HeaderDrawer = () => {
           ) : (
             <div className="flex w-full items-center justify-between">
               <div className="flex items-center ">
-                <p className="ml-3 mr-4 text-xl">Adam Bryndza</p>
+                <p className="ml-3 mr-4 text-xl">{session.user.name}</p>
               </div>
               <button
                 className="md rounded-lg bg-red-500 px-4 py-3 text-white"
