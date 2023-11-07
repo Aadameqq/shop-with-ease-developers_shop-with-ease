@@ -12,6 +12,7 @@ https://nodejs.org/en
     <br>![Alt text](image.png)
   - następnie kliknięcie przycisku "Download Zip"
     <br>![Alt text](image-1.png)
+  - rozpakowanie pliku zip
 
 ### 3. W folderze głównym wykonaj poniższe komendy:
 
@@ -21,6 +22,8 @@ npm run build
 npm run start
 ```
 
-### 4. Po chwili strona powinna znajdować się pod adresem:
+Folder główny to ten gdzie znajduje się kod. Będzie on się prawdopodobnie nazywał "shop-with-ease-developers_shop-with-ease"
 
-` http://localhost:3000/`
+### 4. Po chwili strona powinna być dostępna pod adresem:
+
+`http://localhost:3000/`
