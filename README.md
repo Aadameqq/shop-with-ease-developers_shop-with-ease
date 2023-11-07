@@ -14,7 +14,7 @@ https://nodejs.org/en
     <br>![Alt text](image-1.png)
   - rozpakowanie pliku zip
 
-### 3. W folderze głównym wykonaj poniższe komendy:
+### 3. W folderze głównym wykonaj kolejno poniższe komendy:
 
 ```
 npm ci
